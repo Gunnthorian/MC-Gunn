@@ -220,8 +220,8 @@ a{
 }
 
 .nav-starred{
-  background-color: #059D6A;
-  border-radius: 4px;
+  background-color: #FFB92E;
+  border-radius: 6px;
   color: #ffffff;
 }
 
@@ -236,7 +236,7 @@ a{
   padding: 4px 10px 1px 10px;
   border-radius: 0px 0px 5px 5px;
   height: 20px;
-  color: #0DD291;
+  color: #00FFA9;
   text-shadow: none;
   background-color: whitesmoke;
 }
@@ -247,7 +247,7 @@ a{
 
 .nav-link.nav-starred:hover:after{
   color: #00FFA9;
-  background-color: #07734F;
+  background-color: #79553A;
 }
 
 .showcase-cont{
@@ -305,6 +305,9 @@ a{
   100% {
     transform: scale(1);
   }
+}
+.column > h5{
+  color: lightgrey
 }
 
 .container-background{
