@@ -83,19 +83,21 @@
   <div class="container-background">
     <div class="container cont-alt">
       <div class="row">
-        <div class="one-third column">
+        <div class="column">
           <h4>Basic Page</h4>
-          <div class="g-hangout" data-render="createhangout"></div>
-          <p>This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the. This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the. This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the <a href="http://www.getskeleton.com">Skeleton
-            documentation</a>.</p>
-        </div>
-        <div img-src="./images/test_img.png" img-src-hori="./images/test_img.png" onload-rise="" class="two-thirds column fit-center-img">
+          <iframe id="forum_embed"
+            src="javascript:void(0)"
+            scrolling="no"
+            frameborder="0"
+            width="900"
+            height="700">
+          </iframe>
+          <script type="text/javascript">
+            document.getElementById('forum_embed').src =
+               'https://groups.google.com/forum/embed/?place=forum/gunnin'
+               + '&showsearch=true&showpopout=true&showtabs=false'
+               + '&parenturl=' + encodeURIComponent(window.location.href);
+          </script>
         </div>
       </div>
     </div>
