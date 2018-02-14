@@ -112,7 +112,24 @@ gapi.hangout.render('placeholder-div', { 'render': 'createhangout' });
       <p style="padding: 12px">2018 - The Gunn In Team</p>
     </div>
   </div>
+  <!-- THESE POSITIONS ARE ABSOLUTE AND GET PLACED SOMEWHERE ON THE PAGE-->
+  <script src="https://mcapi.us/scripts/minecraft.js"></script>
+  <div class="server-status">
+    The server is <span class="server-online"></span>!
+  </div>
+  <script>
+    MinecraftAPI.getServerStatus('199.187.127.140', {
+      port: 25874 // optional, only if you need a custom port
+    }, function (err, status) {
+      if (err) {
+        return document.querySelector('.server-status').innerHTML = 'Error loading status';
+      }
 
+      // you can change these to your own message!
+      document.querySelector('.server-online').innerHTML = status.online ? 'Online' : 'Offline';
+      document.querySelector('.server-online').style.color = status.online ? '#00cc00' : '#e62e00';
+    });
+  </script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
