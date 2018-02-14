@@ -248,8 +248,8 @@ a{
 }
 
 .nav-link.nav-starred:hover:after{
-  color: #00FFA9;
-  background-color: #79553A;
+  color: #ffffff;
+  background-color: #ffaa00;
 }
 
 .showcase-cont{

@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>MC.Gunn.In</title>
-  <meta name="description" content="MC.Gunn.In Website">
+  <title>The Gunn In</title>
+  <meta name="description" content="This is the primary website created for The Gunn In Minecraft community.">
   <meta name="author" content="Gunnar Bjorkman">
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -76,7 +76,13 @@
           <h1>About</h1>
           <h5>Whats gunn'n on over here?</h5>
           <p>This server was made to bring back the feel of older servers and
-            foster a no stress environment. Feel free to meet the community in discord or hop on the server hourly - daily - weekly - or monthly; we're here for the long run.</p>
+            foster a no stress environment. Feel free to meet the community in
+            discord or hop on the server hourly - daily - weekly - or monthly;
+            we're here for the long run.
+          </p>
+          <p>
+            Server IP: play.gunn.in
+          </p>
         </div>
       </div>
     </div>
@@ -115,7 +121,7 @@ gapi.hangout.render('placeholder-div', { 'render': 'createhangout' });
   <!-- THESE POSITIONS ARE ABSOLUTE AND GET PLACED SOMEWHERE ON THE PAGE-->
   <script src="https://mcapi.us/scripts/minecraft.js"></script>
   <div class="server-status">
-    The server is <span class="server-online"></span>!
+    play.gunn.in is <span class="server-online"></span>!
   </div>
   <script>
     MinecraftAPI.getServerStatus('199.187.127.140', {
@@ -128,6 +134,8 @@ gapi.hangout.render('placeholder-div', { 'render': 'createhangout' });
       // you can change these to your own message!
       document.querySelector('.server-online').innerHTML = status.online ? 'Online' : 'Offline';
       document.querySelector('.server-online').style.color = status.online ? '#00cc00' : '#e62e00';
+      document.getElementById('showcase-gif').src = status.online ? 'images/giphy.gif' : 'images/bedrock.png';
+
     });
   </script>
 <!-- End Document
