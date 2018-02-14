@@ -2,6 +2,28 @@ a{
   color: #008CFF;
 }
 
+.title-img{
+  width: 100%;
+  height: 230px;
+}
+
+.title-img > img {
+  display: block;
+  margin: 20px auto -20px auto;
+}
+
+@media (max-width: 700px) {
+  .title-img > img {
+  width: 100%;
+  }
+}
+
+@media (min-width: 700px) {
+  .title-img > img {
+  width: 700px;
+  }
+}
+
 .nav-cont{
   z-index: 10;
   position: fixed;
@@ -9,7 +31,6 @@ a{
   height: 80px;
   margin: 0 auto;
   box-sizing: border-box;
-  background-color: #24292e;
   transition: height .1s ease;
   user-drag: none;
   user-select: none;
@@ -17,6 +38,45 @@ a{
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+.nav-unscrolled::after{
+  z-index: -10;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 80px;
+  top: 80px;
+  background-size: auto 80px;
+  background-image: url(../images/grass_1.png);
+  background-repeat: repeat;
+  transition: top 0.1s;
+}
+
+.nav-scrolled::after{
+  z-index: -10;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  overflow-y: hidden;
+  background-size: auto 80px;
+  background-image: url(../images/grass_2.png);
+  background-repeat: repeat;
+  transition: top 0.1s;
+}
+.nav-scrolled::before{
+  z-index: -20;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  overflow-y: hidden;
+  background-color: white;
 }
 .nav-bar{
   position: relative;
@@ -32,12 +92,15 @@ a{
   .nav-bar{
     width: 80%; }
 }
+.nav-unscrolled > .nav-bar > a > img {
+  display: none;
+}
 
 .nav-bar > a > img{
   height: 80px;
   width: 80px;
   top: 0px;
-  transition: top .1s ease;
+  transition: top .1s ease, left 1s;
   margin: 0px auto;
 }
 
@@ -69,7 +132,18 @@ a{
 }
 
 .nav-scrolled{
+  position: fixed;
+  top: 0px;
   height: 60px;
+  transition: color 0.5s;
+}
+
+.nav-unscrolled{
+  position: absolute;
+  top: 230px;
+  height: 80px;
+  background-color: white;
+  transition: color 0.5s;
 }
 
 .nav-link-cont{
@@ -109,7 +183,7 @@ a{
   padding: 5px 10px;
   border-radius: 5px;
   float: right;
-  color: #ED3636;
+  color: #3AC1DF;
   font-size: 1.3em;
   cursor: pointer;
   transition: 0.2s;
@@ -121,6 +195,17 @@ a{
   transition: 0.2s;
   transition-property: top, filter;
   padding: 5px 10px 0px 10px;
+}
+.nav-scrolled .nav-link {
+  text-shadow: 0px 0px 3px #000;
+  /* text-shadow:
+  -1px -1px 0 #fff,
+  1px -1px 0 #fff,
+  -1px 1px 0 #fff,
+  1px 1px 0 #fff; */
+}
+.nav-scrolled .nav-starred {
+  text-shadow: none;
 }
 
 .nav-link:active{
@@ -134,9 +219,9 @@ a{
 }
 
 .nav-starred{
-  background-color: #ED3636;
+  background-color: #3AC1DF;
   border-radius: 4px;
-  color: #24292e;
+  color: #ffffff;
 }
 
 .nav-link:hover:after{
@@ -150,17 +235,19 @@ a{
   padding: 4px 10px 1px 10px;
   border-radius: 0px 0px 5px 5px;
   height: 20px;
-  color: #ED3636;
-  background-color: #373C41;
+  color: #3AC1DF;
+  text-shadow: none;
+  background-color: #d3d3d3;
 }
 
 .nav-link.nav-starred:hover:after{
-  color: #24292e;
-  background-color: #C22D2D;
+  color: #ffffff;
+  background-color: #2A879E;
 }
 
 .showcase-cont{
   position: relative;
+  top: 30px;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
@@ -340,70 +427,51 @@ anchor > div {
   display: block;
   position: relative;
   top: 102px;
-  right: 100px;
+  right: 150px;
   padding-top: 13px;
   height: 37px;
-  width: 50px;
-  background-color: green;
-  -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-anchor > div:hover {
-  display: block;
-  position: relative;
-  top: 52px;
-  right: 100px;
-  padding-top: 13px;
-  height: 37px;
-  width: 50px;
-  background-color: green;
-  -webkit-transition: all .5s;
-    transition: all .5s;
+  width: auto;
+  overflow: hidden;
 }
 
 anchor > div > div {
   display: block;
   position: absolute;
-  content: "#" attr(anchor_id);
-  top: 0px;
+  top: 50px;
   right: 0px;
   padding-top: 13px;
   height: 37px;
-  width: 50px;
-  background-color: red;
-  -webkit-transition: all 3s;
-    transition: all 3s;
+  transition: all .2s;
+  text-align: right;
 }
 
 anchor > div > div:hover {
   display: block;
   position: absolute;
-  content: "dog";
   top: 0px;
   right: 0px;
   padding-top: 13px;
   height: 37px;
   width: 100px;
-  -webkit-transition: all 3s;
-    transition: all 3s;
-  background-color: green;
 }
-anchor > div > div::after {
+anchor > div > div::before {
+  content: "";
   display: block;
   position: absolute;
-  top: 50px;
+  top: -50px;
   right: 0px;
   padding-top: 13px;
   padding-left: 13px;
   height: 37px;
-  width: 100px;
-  -webkit-transition: all 3s;
-    transition: all 3s;
+  width: 50px;
+  transition: all .2s;
+  background-image: url("../images/anchor.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: right;
 }
-anchor > div > div:hover::after {
-  content: "#" attr(anchor_id);
-  top: 50px;
-  -webkit-transition: all 3s;
-    transition: all 3s;
+anchor > div > div:hover::before {
+  display: block;
+  position: absolute;
+  top: -50px;
 }

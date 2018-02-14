@@ -95,6 +95,7 @@ function setupAnchors(){
     var child = document.createElement("div");
     var child_a = document.createElement("div");
     child_a.setAttribute("anchor_id", anchor_id);
+    child_a.innerHTML = "#"+anchor_id;
     child.appendChild(child_a);
     anchors[i].appendChild(child);
   }
@@ -102,7 +103,7 @@ function setupAnchors(){
 
 function navAnimation(){
   var nav_bar = document.getElementById('navigation-id');
-  if (document.body.scrollTop > 0 ) {
+  if (document.body.scrollTop > 230 ) {
       nav_bar.className = "nav-cont nav-scrolled";
   }
   else {
