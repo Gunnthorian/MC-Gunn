@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>The Gunn In | Server Shop</title>
+  <title>The Gunn In</title>
   <meta name="description" content="This is the primary website created for The Gunn In Minecraft community.">
   <meta name="author" content="Gunnar Bjorkman">
   <!-- Mobile Specific Metas
@@ -39,19 +39,32 @@
     <div class="nav-bar">
       <a href="http://the.gunn.in"><img alignment="middle" src="../images/g.png" draggable="false"/></a>
       <div class="nav-link-cont">
-        <a href="#forum"><div url="#forums" class="nav-link">Forum</div></a>
-        <a href="#discord"><div url="#discord" class="nav-link">Discord</div></a>
-        <a href="http://the.gunn.in/wiki"><div url="/wiki" class="nav-link">Wiki</div></a>
+        <a href="http://the.gunn.in/shop"><div url="/shop" class="nav-link nav-starred">S h o p</div></a>
+        <a href="http://the.gunn.in/#forum"><div url="#forums" class="nav-link">Forum</div></a>
+        <a href="http://the.gunn.in/#discord"><div url="#discord" class="nav-link">Discord</div></a>
       </div>
     </div>
   </div>
-  <iframe class="buycraft-iframe" src="https://gunn.buycraft.net"></iframe>
+  <div class="container-background" style="padding-top:100px;background-color:#4E8096">
+    <div class="container">
+      <div class="row">
+        <div class="three columns">
+          <div wiki-link onclick="wikiLink('ps')">Protection Stones</div>
+          <div wiki-link onclick="wikiLink('as')">Area Shop</div>
+          <div wiki-link onclick="wikiLink('ar')">Auto Rank</div>
+          <div wiki-link onclick="wikiLink('ps')">Protection Stones</div>
+          <div wiki-link onclick="wikiLink('ps')">Protection Stones</div>
+        </div>
+        <div class="nine columns">
+          <iframe id="wiki-frame" src="./wiki-home.html" width="100%" height="1000px" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
   <div class="footer-cont">
     <div class="footer-bar">
       <p style="padding: 12px">2018 - The Gunn In Team</p>
     </div>
   </div>
-
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>

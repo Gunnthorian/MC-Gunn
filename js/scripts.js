@@ -134,3 +134,7 @@ function isViewportVisible(e) {
     if(box.right < 0 || box.left > viewport.w) return false;
     return true;
 }
+
+function wikiLink(page){
+  document.getElementById('wiki-frame').src = page + ".html";
+}

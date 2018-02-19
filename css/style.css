@@ -503,3 +503,8 @@ anchor > div > div:hover::before {
   height: 1500px;
   background: #51788B;
 }
+
+[wiki-link]:hover{
+  cursor: pointer;
+  background-color: #477589
+}
