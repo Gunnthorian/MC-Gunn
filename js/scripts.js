@@ -138,3 +138,6 @@ function isViewportVisible(e) {
 function wikiLink(page){
   document.getElementById('wiki-frame').src = page + ".html";
 }
+
+window.addEventListener("resize", documentOnResize);
+window.addEventListener("load", documentOnLoad);

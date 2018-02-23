@@ -24,11 +24,12 @@
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script type="text/javascript" src="./js/scripts.js"></script>
+  <script src="./js/mc-player-counter.min.js"></script>
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="./images/g_back.png">
 </head>
-<body onload="documentOnLoad()" onresize="documentOnResize()">
+<body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -122,7 +123,7 @@ gapi.hangout.render('placeholder-div', { 'render': 'createhangout' });
   <!-- THESE POSITIONS ARE ABSOLUTE AND GET PLACED SOMEWHERE ON THE PAGE-->
   <script src="https://mcapi.us/scripts/minecraft.js"></script>
   <div class="server-status">
-    play.gunn.in is <span class="server-online"></span>!
+    play.gunn.in is <span class="server-online"></span><span data-playercounter-ip="play.gunn.in:25874" data-playercounter-format=" with {online}/{max} players"></span>
   </div>
   <script>
     MinecraftAPI.getServerStatus('199.187.127.140', {
