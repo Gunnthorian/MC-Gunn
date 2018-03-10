@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113921391-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'UA-113921391-2');
+  </script>
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
@@ -152,6 +160,11 @@ gapi.hangout.render('placeholder-div', { 'render': 'createhangout' });
       document.getElementById('showcase-gif').src = status.online ? 'images/giphy.gif' : 'images/bedrock.png';
 
     });
+  </script>
+  <script type="text/javascript">
+    function redirect(){
+      ga('send', 'pageview', '/home');
+    }
   </script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
